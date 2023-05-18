@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Table</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+<body>
+  <br />
+  <p class="mt-5 fw-bolder fs-5 text-center">Basic Admins Data</p>
+  <br />
+  <table class="table table-striped table-light">
+    <thead>
+      <tr class="text-center fw-bolder fs-5">
+        <th scope="col" class="p-3">Id</th>
+        <th scope="col" class="p-3">First Name</th>
+        <th scope="col" class="p-3">Last Name</th>
+        <th scope="col" class="p-3" colspan="2">Operations</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let eachAdmin of allBasicAdminsArr" class="text-center">
+        <td scope="row">{{ eachAdmin._id }}</td>
+        <td>{{ eachAdmin.firstName }}</td>
+        <td>{{ eachAdmin.lastName }}</td>
+        <td>
+          <a class="btn-primary" routerLink="basicAdmin/update/{{eachAdmin._id}}">Update</a>
+        </td>
+        <td>
+          <!--  [routerLink]="['/details', 'department', eachDept.id]" -->
+          <!-- [routerLink]="['/update', 'department', eachDept.id]"
+              routerLinkActive="active" -->
+
+              <button class="btn-danger" (click)="sendToDelete(eachAdmin._id)">Delete</button>
+
+          <!-- TODO Making input Field with ID for Delete -->
+          <!-- <button (click)="sendToDelete(eachDept.id)">Delete</button> -->
+         <!-- <form #f="ngForm" (ngSubmit)="sendToDelete()" method="post">
+          <input type="text" value="{{eachAdmin._id}}">
+          <button type="submit">Delete</button>
+         </form> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+</body>
+</html>

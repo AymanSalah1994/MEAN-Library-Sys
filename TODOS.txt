@@ -1,0 +1,42 @@
+[ Adding CanActivate For the Links ] authorization
+//////////////
+Dash Steps  : 
+    -> Define the Dash Board and Its Children in the app Routing  File 
+
+    -> Go to the Dash Board Of the use and Define the "Place Holder" >> Router-outlet 
+      <router-outlet></router-outlet>
+      This will be the Place Holder For the Children Components 
+
+    -> Inside the Dash Add the "Links " And the routerLink >> 
+    <a routerLink="book-transaction" class="mb-0">Transaction</a>
+    Each Link is Refering to a Child From the Children of the DashBoard 
+
+    RouterLink >> Mach Links Of Children "Avoid / " So that Component is Injected Locally 
+    Not to get a New page 
+    --> 
+===========
+Update Bugs : 
+      Basic Admin ->> OK 
+      employee ->> OK   
+      MEMBER ->> Not Yet 
+      Admin ->> OK   [ ONLY basic Admin Can Do it >> authorization thing ]
+============
+Body Parser for the activation 
+===========
+Editing home Component Design in the template folder  ; 
+  Getting a Nice Design for Home Page 
+============
+Home page For the System 
+=====================
+Models Folder 
+Services Folder 
+=======================
+->Home Page ;
+->REfine Login-Pages , Activation Pages ; 
+    - Font Size and Little Details 
+->
+
+
+////////////////
+All Member Links : 
+  -> 

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Simple Login Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--
+	"firstName": "FirstBasic",
+	"lastName": "LastNameBasic",
+	"password": "12345678",
+	"email": "basic@basic.com",
+	"hiredate": "12-12-2020",
+	"birthdate": "11-11-2020",
+	"image": "C:\\ayman\\pic\\1.jpg",
+	"salary": 123,
+	"isActivated": true,
+	"isRoot": true
+   -->
+   <nav class="navbar navbar-dark navbar-expand-sm bg-dark ">
+    <div class="container">
+      <a href="/" class="navbar-brand">
+        <i class="fas fa-blog"></i> &nbsp; LIBRARY
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div id="navbarCollapse" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="" class="nav-link active"> Home </a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link active"> Blog </a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link active"> About </a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link active"> Contact </a>
+          </li> 
+         </ul>
+      </div>
+    </div>
+  </nav> 
+    <div class="login-form">
+      <form
+        (ngSubmit)="f.form.valid && signup()"
+        #f="ngForm"
+        action=""
+        method="post"
+      >
+        <h2 class="text-center">Sign Up</h2>
+
+        <div class="form-group">
+          <input
+            [(ngModel)]="model.firstName"
+            #name="ngModel"
+            name="firstName"
+            type="text"
+            class="form-control"
+            placeholder="First Name"
+            required="required"
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <input
+            [(ngModel)]="model.lastName"
+            #name="ngModel"
+            name="lastName"
+            type="text"
+            class="form-control"
+            placeholder="Last Name"
+            required="required"
+          />
+        </div>
+
+        <br />
+
+        <div class="form-group">
+          <input
+            [(ngModel)]="model.hiredate"
+            #name="ngModel"
+            name="hiredate"
+            type="text"
+            class="form-control"
+            placeholder="Hire Date"
+            required="required"
+          />
+        </div>
+        <br />
+
+        <div class="form-group">
+          <input
+            [(ngModel)]="model.birthdate"
+            #name="ngModel"
+            name="birthdate"
+            type="text"
+            class="form-control"
+            placeholder="Birth Date"
+            required="required"
+          />
+        </div>
+        <br />
+
+        <div class="form-group">
+          <input
+            [(ngModel)]="model.image"
+            #name="ngModel"
+            name="image"
+            type="text"
+            class="form-control"
+            placeholder="Image"
+            required="required"
+          />
+        </div>
+        <br />
+
+        <div class="form-group">
+          <input
+            [(ngModel)]="model.salary"
+            #name="ngModel"
+            name="salary"
+            type="text"
+            class="form-control"
+            placeholder="Salary"
+            required="required"
+          />
+        </div>
+        <br />
+
+        <div class="form-group">
+          <input
+            [(ngModel)]="model.isActivated"
+            #name="ngModel"
+            name="isActivated"
+            type="text"
+            class="form-control"
+            placeholder="Activated ?"
+            required="required"
+          />
+        </div>
+        <br />
+
+        <div class="form-group">
+          <input
+            [(ngModel)]="model.isRoot"
+            #name="ngModel"
+            name="isRoot"
+            type="text"
+            class="form-control"
+            placeholder="Root ?"
+            required="required"
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <input
+            [(ngModel)]="model.email"
+            #email="ngModel"
+            name="email"
+            type="email"
+            class="form-control"
+            placeholder="Email"
+            required="required"
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <input
+            [(ngModel)]="model.password"
+            #password="ngModel"
+            name="password"
+            type="password"
+            class="form-control"
+            placeholder="Password"
+            required="required"
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block">
+            Sign Up
+          </button>
+        </div>
+      </form>
+      <p class="text-center">
+        <a href="javascript:;" routerLink="/login">Login</a>
+      </p>
+    </div>
+  </body>
+</html>

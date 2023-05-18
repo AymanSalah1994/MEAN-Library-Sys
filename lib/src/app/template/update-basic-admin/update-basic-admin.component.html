@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Add A Basic Admin</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./test.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark navbar-expand-sm bg-dark ">
+      <div class="container">
+        <a href="/" class="navbar-brand">
+          <i class="fas fa-blog"></i> &nbsp; LIBRARY
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="" class="nav-link active"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link active"> Blog </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link active"> About </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link active"> Contact </a>
+            </li>
+           </ul>
+        </div>
+      </div>
+    </nav>
+    <h2 class="ms-5 mt-5">Add Basic Admin</h2>
+    <br />
+    <div class="login-form ms-5">
+      <form [formGroup]="basicAdminForm" (ngSubmit)="updateBasicAdmin()">
+        <label for="firstName" class="form-label fw-bold">First Name</label>
+        <div class="form-field d-flex align-items-center">
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            placeholder="firstName"
+            class="form-control"
+            formControlName="firstName"
+          />
+        </div>
+
+        <label for="lastName" class="form-label fw-bold mt-3">Last Name</label>
+        <div class="form-field d-flex align-items-center">
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="lastName"
+            class="form-control"
+            formControlName="lastName"
+          />
+        </div>
+
+        <label for="email" class="form-label fw-bold mt-3">Email</label>
+        <div class="form-field d-flex align-items-center">
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="email"
+            class="form-control"
+            formControlName="email"
+          />
+        </div>
+
+        <label for="password" class="form-label fw-bold mt-3">Password</label>
+        <div class="form-field d-flex align-items-center">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="password"
+            class="form-control"
+            formControlName="password"
+          />
+        </div>
+
+        <label for="salary" class="form-label fw-bold mt-3">Salary</label>
+        <div class="form-field d-flex align-items-center">
+          <input
+            type="number"
+            name="salary"
+            id="salary"
+            placeholder="salary"
+            class="form-control"
+            formControlName="salary"
+          />
+        </div>
+
+        <label for="hiredate" class="form-label fw-bold mt-3">Hire Date</label>
+        <div class="form-field d-flex align-items-center">
+          <input
+            type="date"
+            name="hiredate"
+            id="hiredate"
+            placeholder="hiredate"
+            class="form-control"
+            formControlName="hiredate"
+          />
+        </div>
+
+        <label for="birthdate" class="form-label fw-bold mt-3"
+          >Birth Date</label
+        >
+        <div class="form-field d-flex align-items-center">
+          <input
+            type="date"
+            name="birthdate"
+            id="birthdate"
+            placeholder="birthdate"
+            class="form-control"
+            formControlName="birthdate"
+          />
+        </div>
+
+        <!-- TODO the Image Thing ?  -->
+        <br />
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Submit Form</button>
+        </div>
+        <br>
+      </form>
+    </div>
+    <script src="./test.js"></script>
+  </body>
+  <script src="./test.js"></script>
+</html>

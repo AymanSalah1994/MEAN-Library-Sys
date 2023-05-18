@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Add Book</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark navbar-expand-sm bg-dark">
+      <div class="container">
+        <a href="/" class="navbar-brand">
+          <i class="fas fa-blog"></i> &nbsp; LIBRARY
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="" class="nav-link active"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link active"> Blog </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link active"> About </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link active"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="divider d-flex align-items-center mt-4">
+      <p class="mt-5 fw-bolder">Add Book</p>
+    </div>
+    <div class="container">
+      <form
+        (ngSubmit)="f.form.valid && addBook()"
+        #f="ngForm"
+        action=""
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="form-group">
+          <label class="fw-bold">Title</label>
+          <input
+            name="title"
+            type="text"
+            class="form-control"
+            [(ngModel)]="model.title"
+            #title="ngModel"
+          />
+        </div>
+        <div class="form-group">
+          <label class="mt-3 fw-bold">Author</label>
+          <input
+            name="author"
+            type="text"
+            class="form-control"
+            [(ngModel)]="model.author"
+            #author="ngModel"
+          />
+        </div>
+        <div class="form-group">
+          <label class="mt-3 fw-bold">Publisher</label>
+          <input
+            name="publisher"
+            type="text"
+            class="form-control"
+            [(ngModel)]="model.publisher"
+            #publisher="ngModel"
+          />
+        </div>
+        <div class="form-group">
+          <label class="mt-3 fw-bold">publishingDate</label>
+          <input
+            name="publishingDate"
+            type=""
+            class="form-control"
+            [(ngModel)]="model.publishingDate"
+            #publishingDate="ngModel"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="mt-3 fw-bold">Category</label>
+          <input
+            name="Category"
+            type=""
+            class="form-control"
+            [(ngModel)]="model.category"
+            #category="ngModel"
+          />
+        </div>
+        <div class="form-group">
+          <label class="mt-3 fw-bold">Edition</label>
+          <input
+            name="Edition"
+            type=""
+            class="form-control"
+            [(ngModel)]="model.edition"
+            #edition="ngModel"
+          />
+        </div>
+        <div class="form-group">
+          <label class="mt-3 fw-bold">Pages</label>
+          <input
+            name="Pages"
+            type=""
+            class="form-control"
+            [(ngModel)]="model.pages"
+            #pages="ngModel"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="mt-3 fw-bold">Total No. Of Copies</label>
+          <input
+            name="totalNoOfCopies"
+            type=""
+            class="form-control"
+            [(ngModel)]="model.totalNoOfCopies"
+            #totalNoOfCopies="ngModel"
+          />
+        </div>
+        <div class="form-group">
+          <label class="mt-3 fw-bold">No. Of Borrowed Copies</label>
+          <input
+            name="noOfBorrowedCopies"
+            type=""
+            class="form-control"
+            [(ngModel)]="model.noOfBorrowedCopies"
+            #noOfBorrowedCopies="ngModel"
+          />
+        </div>
+        <div class="form-group">
+          <label class="mt-3 fw-bold">No. Of Reading Copies</label>
+          <input
+            name="noOfreadingCopies"
+            type=""
+            class="form-control"
+            [(ngModel)]="model.noOfreadingCopies"
+            #noOfreadingCopies="ngModel"
+          />
+        </div>
+        <div class="form-group">
+          <label class="mt-3 fw-bold">No. Of Available Copies</label>
+          <input
+            name="noOfAvailableCopies"
+            type=""
+            class="form-control"
+            [(ngModel)]="model.noOfAvailableCopies"
+            #noOfAvailableCopies="ngModel"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="mt-3 fw-bold">Times Of Reading</label>
+          <input
+            name="timesOfReading"
+            type=""
+            class="form-control"
+            [(ngModel)]="model.timesOfReading"
+            #timesOfReading="ngModel"
+          />
+        </div>
+        <div class="form-group">
+          <label class="mt-3 fw-bold">Availability</label>
+          <input
+            name="available"
+            type=""
+            class="form-control"
+            [(ngModel)]="model.available"
+            #available="ngModel"
+          />
+        </div>
+        <div class="form-group">
+          <label class="mt-3 fw-bold">Times Of Borrowing</label>
+          <input
+            name="timesOfBorrowing"
+            type=""
+            class="form-control"
+            [(ngModel)]="model.timesOfBorrowing"
+            #timesOfBorrowing="ngModel"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="mt-3 fw-bold">Shelf No.</label>
+          <input
+            name="shelfNo"
+            type=""
+            class="form-control"
+            [(ngModel)]="model.shelfNo"
+            #shelfNo="ngModel"
+          />
+        </div>
+        <div class="form-group">
+          <label class="mt-3 fw-bold">Arrival Date</label>
+          <input
+            name="arrivalDate"
+            type=""
+            class="form-control"
+            [(ngModel)]="model.arrivalDate"
+            #arrivalDate="ngModel"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlInput1" class="mt-3 fw-bold"
+            >Book Picture</label
+          >
+          <input type="file" name="file" class="form-control" />
+          <!-- TODO the Book Picture  -->
+          <!-- BUG Something Related to Another Field  -->
+          <!-- TWO models Are Confilicting -->
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+          <button class="btn btn-danger" type="reset">Reset form</button>
+          <button class="btn btn-primary" type="submit">Submit Form</button>
+        </div>
+      </form>
+    </div>
+    <br /><br /><br />
+  </body>
+</html>

@@ -1,0 +1,47 @@
+library-system-nodejs/node_modules
+library-system-nodejs/package-lock.json
+library-system-nodejs/images/*
+library-system-nodejs/log.log
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+lib/dist
+lib/tmp
+lib/out-tsc
+lib/bazel-out
+
+# Node
+lib/node_modules
+lib/npm-debug.log
+lib/yarn-error.log
+
+# IDEs and editors
+lib/.idea/
+lib/.project
+lib/.classpath
+lib/.c9/
+lib/*.launch
+lib/.settings/
+lib/*.sublime-workspace
+
+# Visual Studio Code
+lib/.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+lib/.history/*
+
+# Miscellaneous
+lib/.angular/cache
+lib/.sass-cache/
+lib/connect.lock
+lib/coverage
+lib/libpeerconnection.log
+lib/testem.log
+lib/typings
+
+# System files
+lib/.DS_Store
+lib/Thumbs.db

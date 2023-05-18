@@ -1,0 +1,27 @@
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+input{
+    font-size:13px;
+}
+button{
+    background-color: rgb(98, 148, 189);
+    font-size:15px;
+    color:aliceblue;
+}
+button:hover{
+    background-color: rgb(24, 41, 53);
+    color:aliceblue;
+}
